@@ -1,0 +1,80 @@
+@import "compass";
+@import "../bower/normalize.css/normalize.css";
+@import "../bower/compass-breakpoint/stylesheets/breakpoint";
+
+html, body {
+  height: 100%;
+}
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.page-wrap {
+	padding-top: 1px;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+// Sticky Footer
+$footer-height: 50px;
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -$footer-height; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: $footer-height; 
+}
+// Sticky Footer
+
+.site-footer {
+	border-top: 1px solid black;
+
+	p {
+		margin: 0;
+	}
+}
+
+.main {
+	padding: 10px 0;
+}
+
+@import "menu";

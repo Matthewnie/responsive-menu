@@ -1,0 +1,24 @@
+{
+  "name": "responsive-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "~3.8.8",
+    "gulp-concat": "~2.4.1",
+    "gulp-jsmin": "~0.1.4",
+    "gulp-jshint": "~1.8.4",
+    "gulp-rename": "~1.2.0",
+    "jshint-stylish": "~0.4.0",
+    "main-bower-files": "~2.0.0",
+    "gulp-compass": "~1.3.1",
+    "gulp-livereload": "~2.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Niedzielski",
+  "license": ""
+}

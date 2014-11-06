@@ -1,0 +1,176 @@
+.navigation-button {
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  
+  padding: 8px 0 8px;
+  display: block;
+
+  &.open {
+
+  }
+}
+
+.mainnav {
+  border-bottom: 2px solid #4f0b2e;
+}
+.nav {
+  display: none;
+  &.open {
+    display: block;
+  }
+
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+
+  position: relative;
+  z-index: 1500;
+
+  @extend .cf;
+
+  
+  > li {
+    position: relative;
+    width: 20%;
+
+    > a {
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: normal;
+      text-align: center;
+
+      z-index: 10;
+      padding: 8px 0 8px;
+      height: 40px;
+
+      display: block;
+      position: relative;
+
+      &.active,
+      &.hover,
+      &:hover {
+        
+      }
+    }
+
+    .children-button {
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: normal;
+      text-align: center;
+
+      padding: 8px 15px;
+      background-color: transparent;
+
+      z-index: 15;
+
+      border: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      &.open {
+
+      }
+    }
+
+    &.open {
+      > a {
+        border: none;
+      }
+      ul {
+        display: block;
+        left: none !important;
+      }
+    }
+
+    ul {
+      text-align: left;
+
+      list-style: none;
+
+      display: none;
+
+      height: auto;
+      width: 100%;
+      margin:0;
+      padding: 0;
+
+      background-color: #fff;
+
+      a {
+        display: block;
+        font-size: 16px;
+
+        padding: 5px 0;
+
+        &:hover,
+        &.active {
+        }
+      }
+
+      li {
+        padding-left: 10px;
+      }
+    }
+  }
+
+}
+@include breakpoint(500px){
+  .navigation-button {
+    display: none;
+  }
+  .nav {
+    display: block;
+    margin: 0 auto;
+    > li {
+      float: left;
+      width: 20%;
+
+      .children-button {
+        display: none;
+      }
+
+      ul {
+        padding: 20px 20px 40px;
+        height: auto;
+
+        width: 218px;
+
+        position: absolute;
+        left: 0;
+        top: 40px;
+
+        a {
+          font-size: 18px;
+          text-decoration: none;
+          font-weight: normal;
+
+          z-index: 10;
+          padding: 8px 0 8px;
+
+          display: block;
+          position: relative;
+
+          &.active,
+          &:hover,
+          &.hover {
+            font-style: italic;
+          }
+        }
+      }
+
+      &:hover,
+      &.hover {
+        > a {
+
+        }
+        ul {
+          display: block;
+        }
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "taverse-victorian",
+  "version": "0.0.0",
+  "authors": [
+    "Matthew Niedzielski <matt@flightpathcreative.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.0",
+    "jquery": "1.x",
+    "modernizr": "*",
+    "compass-breakpoint": "~2.5.0"
+  },
+  "overrides": {
+    "bxSlider": {
+      "main": [
+        "images",
+        "*.css",
+        "*.js"
+      ]
+    },
+    "unsemantic": {
+      "main": [
+        "assets/sass/unsemantic-grid-responsive.scss",
+        "assets/sass/partials/*"
+      ]
+    },
+    "modernizr": {
+      "main": "modernizr.js"
+    },
+    "compass-breakpoint":{
+      "main": "stylesheets/**"
+    }
+  }
+}
