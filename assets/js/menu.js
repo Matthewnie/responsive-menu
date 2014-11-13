@@ -76,7 +76,7 @@ $(function(){
     // Allows dropdown to close
     // Probably a better way to accomplish, but works for the time being
     $('body').on('touchstart', function(e){
-      $('#nav li').removeClass('hover');
+      $('js-mainnav li').removeClass('hover');
     });
 
     // Open dropdown on tap
@@ -86,7 +86,7 @@ $(function(){
         return true;
       }
       
-      $('#nav li').removeClass('hover');
+      $('js-mainnav li').removeClass('hover');
       $(this).parent().addClass('hover');
       positionChild($(this).parent());
       return false;
