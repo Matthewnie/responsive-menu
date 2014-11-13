@@ -17,20 +17,6 @@ gulp.task('getBowerFiles', function() {
         .pipe(gulp.dest('assets/bower'))
 });
 
-gulp.task('lint', function(){
-  gulp.src(jsFiles)
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-});
-
-// concat all scripts, minify, and output
-gulp.task('compile', ['lint'], function(){
-  return gulp.src(jsFiles)
-    .pipe(concat("all.js", {newLine: '\r\n'}))
-    .pipe(jsmin())
-    .pipe(gulp.dest('./assets/js/dist/'))
-});
-
 gulp.task('compass', function() {
   gulp.src('./assets/sass/*.scss')
   .pipe(compass({
@@ -44,9 +30,7 @@ gulp.task('compass', function() {
   // .pipe(gulp.dest('app/assets/temp'));
 });
 
-gulp.task('default', ['getBowerFiles', 'compile', 'compass'], function(){
-  // Watch JS files
-  gulp.watch("assets/js/*.js", ['compile']);
+gulp.task('default', ['getBowerFiles', 'compass'], function(){
   // Watch scss files
   gulp.watch("assets/sass/**/*.scss", ['compass']);
   // Init Livereload
