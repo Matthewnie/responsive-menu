@@ -9,11 +9,7 @@ javascripts_dir = "assets/js"
 fonts_dir = "assets/fonts"
 
 # output_style = :nested
-<<<<<<< HEAD
-output_style = :compressed
-=======
 output_style = :nested
->>>>>>> master
 environment = :development
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
